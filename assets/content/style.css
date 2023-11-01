@@ -1,9 +1,14 @@
+body {
+    background-color: steelblue;
+}
+
 /* placeholder color for the header */
 header {
     background-color: red;
     align-items: center;
     display: flex;
     justify-content: flex-end;
+    margin-bottom: 12px;
 }
 
 /* placeholder color for the title */
@@ -42,9 +47,42 @@ header nav ul li a {
 
 /* hardcode 200px for placeholder */
 figure {
+    margin: 0;
+    padding: 0;
     width: 100%;
 }
 
 main {
     width: 100%;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    background-color: white;
+}
+
+.sectionContent {
+    width: 67%;
+    margin: 12px;
+    padding: 12px;
+}
+
+.sectionTitle {
+    width: 33%;
+    text-align: center;
+    margin: 12px;
+    border-right: solid 3px black;
+}
+
+/* placeholder color for the header */
+footer {
+    background-color: red;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: white;
 }
