@@ -2,22 +2,41 @@ body {
     background-color: steelblue;
 }
 
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#gradient {
+    background: linear-gradient(-45deg, red, yellow, blue, green);
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+    width: 100%;
+    height: 200px;
+}
+
 /* placeholder color for the header */
 header {
-    background-color: red;
     align-items: center;
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 12px;
+    margin-bottom: 6px;
+    background-color: white;
 }
 
 /* placeholder color for the title */
 /* title takes up 50% of header and nav takes up 50% of header */
 #title {
     text-align: start;
-    color: white; 
-    margin: 0;
-    padding: 10px;
+    color: black; 
+    margin-left: 24px;
     font-weight: bold;
     width: 50%;
 }
@@ -69,13 +88,16 @@ section {
     width: 67%;
     margin: 12px;
     padding: 12px;
+    border-left: solid 3px black;
+    font-size: large;
 }
 
 .sectionTitle {
     width: 33%;
     text-align: center;
     margin: 12px;
-    border-right: solid 3px black;
+    font-size: 32px;
+    font-weight: bold;
 }
 
 /* placeholder color for the header */
