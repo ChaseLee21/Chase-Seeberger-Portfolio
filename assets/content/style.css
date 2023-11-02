@@ -41,12 +41,14 @@ header nav {
     margin-right: 3%;
 }
 
+footer ul,
 header nav ul {
     display: flex;
     justify-content: end;
 
 }
 
+footer ul li,
 header nav ul li {
     
     list-style: none;
@@ -71,8 +73,6 @@ section {
     display: flex;
     align-items: center;
     flex-direction: row;
-    margin-top: 12px;
-    margin-bottom: 12px;
     background-color: #ffffff;
     min-height: 100vh;
     border: black solid 3px;
@@ -80,14 +80,57 @@ section {
     margin-bottom: 50vh;
 }
 
-/* placeholder color for the footer */
 footer {
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    background-color: #ffffff;
+    min-height: 50vh;
+    border: black solid 3px;
+    border-radius: 10px;
+    margin-bottom: 25vh;
+}
+
+footer h3 {
+    font-size: 300%;
+    font-weight: 900;
+}
+
+footer ul li a {
+    font-weight: bold;
     display: flex;
     justify-content: center;
     color: white;
+    background-color: rgb(0, 0, 0);
+    padding: 12px;
+    border-radius: 10px;
 }
+
+footer ul li a:hover {
+    transition: 0.5s;
+    background-color: #AAA;
+    color: black;
+}
+
+footer ul li a:not(:hover) {
+    transition: 0.5s;
+}
+
+footer ul {
+    position: relative;
+}
+
+#linkedIn:focus::after,
+#linkedIn:hover::after {
+    content: "LinkedIn Profile is coming soon!";
+    position: absolute;
+    top: -36px;
+    left: 100px;
+    border: solid 1px black;
+    padding: 1%;
+}
+
 
 /* Class Selectors */
 
@@ -132,6 +175,7 @@ footer {
 #aboutMe p {
     margin-left: 12px;
 }
+
 
 #myWork .sectionContent {
     display: flex;
@@ -207,7 +251,24 @@ footer {
         justify-content: center;
         align-items: center;
     }
+
+    footer ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
     
+    #linkedIn:focus::after,
+    #linkedIn:hover::after {
+    content: "LinkedIn Profile is coming soon!";
+    position: absolute;
+    top: 75px;
+    left: 50px;
+    background-color: black;
+    color: white;
+    padding: 1%;
+}
 }
 
 @media screen and (max-width: 768px) {
