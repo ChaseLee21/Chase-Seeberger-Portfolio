@@ -1,44 +1,20 @@
+/* Univseral Selectors */
+
+/* Element Selectors */
+
 body {
-    background-color: steelblue;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-#gradient {
-    background: linear-gradient(-45deg, red, yellow, blue, green);
+    background-image: linear-gradient(-45deg, rgb(0, 0, 180), blue, rgb(67, 67, 216), rgb(94, 94, 174), rgb(67, 67, 216), blue, rgb(0, 0, 180));
     background-size: 200% 200%;
-    animation: gradient 10s ease infinite;
-    width: 100%;
-    height: 200px;
+    animation: gradient 5s ease infinite;
+    padding: 24px;
 }
 
-/* placeholder color for the header */
 header {
     align-items: center;
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 6px;
-    background-color: white;
-}
-
-/* placeholder color for the title */
-/* title takes up 50% of header and nav takes up 50% of header */
-#title {
-    text-align: start;
-    color: black; 
-    margin-left: 24px;
-    font-weight: bold;
-    width: 50%;
+    margin-bottom: 12px;
+    background-color: #ffffffbf;
 }
 
 /* title takes up 50% of header and nav takes up 50% of header */
@@ -54,21 +30,15 @@ header nav ul {
 header nav ul li {
     list-style: none;
     padding: 10px;
-    background-color: white;
     margin: 12px;
+    font-size: 24px;
+
 }
 
 header nav ul li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
-}
-
-/* hardcode 200px for placeholder */
-figure {
-    margin: 0;
-    padding: 0;
-    width: 100%;
 }
 
 main {
@@ -79,10 +49,21 @@ section {
     display: flex;
     align-items: center;
     flex-direction: row;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    background-color: white;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    background-color: #ffffffbf;
 }
+
+/* placeholder color for the footer */
+footer {
+    background-color: red;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+/* Class Selectors */
 
 .sectionContent {
     width: 67%;
@@ -100,11 +81,98 @@ section {
     font-weight: bold;
 }
 
-/* placeholder color for the header */
-footer {
-    background-color: red;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    color: white;
+/* Id Selectors */
+
+/* title takes up 50% of header and nav takes up 50% of header */
+#title {
+    text-align: start;
+    color: black;
+    margin-left: 24px;
+    font-weight: bold;
+    width: 50%;
+    font-size: 28px;
 }
+
+#aboutMe .sectionContent {
+    display: flex;
+    flex-direction: row;
+}
+
+#aboutMe img {
+    width: auto;
+    height: 400px;
+}
+
+#aboutMe p {
+    margin-left: 12px;
+}
+
+#myWork .sectionContent img {
+    margin: 12px;
+    border: solid 3px black;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1024px) {
+    header {
+        flex-direction: column;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    header nav ul {
+        justify-content: center;
+    }
+
+    header nav ul li {
+        margin: 0px;
+    }
+    
+    #title {
+        width: 100%;
+        text-align: center;
+    }
+
+    #aboutMe .sectionContent {
+        flex-direction: column;
+    }
+
+    #aboutMe img {
+        width: 100%;
+        height: auto;
+    }
+
+    #aboutMe p {
+        margin-left: 0px;
+    }
+
+    #myWork .sectionContent img {
+        width: 100%;
+        height: auto;
+    }
+    
+}
+
+/* Keyframes Animations */
+
+@keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+
+
+
+
+
+
