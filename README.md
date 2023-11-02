@@ -4,6 +4,8 @@
 
 Create a portfolio to display projects I have completed through my coding journey. The goal of the portfolio is to showcase skills and talents to employers looking to fill a part-time or full-time position.
 
+![Screenshot of about me page on the portfolio](https://chaselee21.github.io/Portfolio/assets/Project-Screenshot.png)
+
 ## Installation
 No installation required 
 
