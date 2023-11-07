@@ -11,13 +11,13 @@
     </head>
     <body>
 
-        <header>
-            <div id="title">
+        <header class="card flexColumn">
+            <div>
                 <h1>Chase Seeberger</h1>
                 <h2>Web Developer</h2>
             </div>
             <nav>
-                <ul>
+                <ul class="flexRow">
                     <li ><a href="#aboutMe">About Me</a></li>
                     <li ><a href="#myWork">My Work</a></li>
                     <li ><a href="#contactMe">Contact Me</a></li>
@@ -26,12 +26,10 @@
         </header>
 
         <main>
-            <section id="aboutMe">
-                <div class="sectionTitle">
-                    <h3>About Me</h3>
-                </div>
-                <div class="sectionContent">
-                    <figure>
+            <section id="aboutMe" class="card">
+                <h3 class="cardTitle">About Me</h3>
+                <div class="cardContent">
+                    <figure class="flexColumn">
                         <div>
                             <img src="assets/images/Me-at-the-beach.jpg" alt="Myself at the beach diffing for rocks for my aquarium.">
                         </div>
@@ -58,14 +56,10 @@
                     </div>
                 </div>
             </section>
-            <section id="myWork">
-
-                <div class="sectionTitle">
-                    <h3>My Work</h3>
-                </div>
-                
-                <div class="sectionContent">
-                    <div class="projectDiv">
+            <section id="myWork" class="card">
+                <h3 class="cardTitle">My Work</h3>
+                <div class="cardContent flexRow">
+                    <div class="flexColumn">
                         <h4>Prework Study Guide</h4>
                         <p>
                             This is a website I built as a study guide before starting the bootcamp.
@@ -73,7 +67,7 @@
                         </p>
                         <a href="https://chaselee21.github.io/prework-study-guide/" id="mainWorkImage"><img src="assets/images/study-guide.png" alt="Landing page of prework study guide website"/></a>
                     </div>
-                    <div class="projectDiv">
+                    <div class="flexColumn">
                         <h4>SEO & Semantic HTML</h4>
                         <p>
                             This is a website for a marketing company called Horiseon.
@@ -82,7 +76,7 @@
                         </p>
                         <a href="https://chaselee21.github.io/Module-01-Challenge/"><img src="assets/images/search-engine-optimization.jpg"  alt="Notebook with search engine optimization written in it"/></a>
                     </div>
-                    <div class="projectDiv">
+                    <div class="flexColumn">
                         <h4>Javascript Text Game</h4>
                         <p>
                             This is a text based game that I built using vanilla Javascript (no frameworks). 
@@ -94,9 +88,9 @@
             </section>
 
         </main>
-        <footer id="contactMe">
+        <footer id="contactMe" class="flexColumn">
             <h3>Contact Me</h3>
-            <ul>
+            <ul class="flexRow">
                 <li>
                     <a href="https://github.com/ChaseLee21">Github</a>
                 </li>

@@ -1,119 +1,120 @@
+/* Variables */
+:root {
+    --light: #ffffff;
+    --dark: #000000;
+}
+
+
 /* Univseral Selectors */
+* {
+    list-style: none;
+    text-decoration: none;
+    object-fit: cover;
+}
+
 
 /* Element Selectors */
 
+/* paralax scrolling */
 body {
     background-image: url("../images/beach-background-landscape.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 66%;
+    width: 66vw;
     margin: auto;
 }
 
+/* header 1st title */
+h1 {
+    text-align: center;
+    color: var(--light);
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+/* header 2nd title */
+h2 {
+    text-align: center;
+    color: var(--light);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+/* project titles in myWork section */
+h4 {
+    text-align: center;
+    color: var(--dark);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1em;
+    text-align: center;
+    color: var(--dark);
+}
+
+/* this sets the img size to fill 100% of the div its in */
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* image captions */
+figure figcaption {
+    font-weight: bold;
+}
+
+/* remove standard padding on ul */
+ul {
+    padding-left: 0;
+}
+
+/* Background gradient for header */
+/* Has a dark blue background if gradient fails */
 header {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 12px;
     background-color: rgb(0, 0, 63);
     background-image: radial-gradient(circle, black, blue, white);
-    /* background-image: linear-gradient(-45deg, rgb(0, 0, 180), blue, rgb(67, 67, 216), rgb(94, 94, 174), rgb(67, 67, 216), blue, rgb(0, 0, 180), black); */
-    /* background-size: 125% 125%; */
     animation: header alternate 5s ease infinite;
-    min-height: 100vh;
-    border: black solid 3px;
-    border-radius: 10px;
-    margin-bottom: 50vh;
 }
 
-/* title takes up 50% of header and nav takes up 50% of header */
-header nav {
-    margin-right: 3%;
-}
-
-header nav ul {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
-header nav ul li {
-    list-style: none;
-    padding: 1em;
-    font-size: 1.5em;
-}
-
+/* Header & footer anchor tags */
+footer ul li a,
 header nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
+    color: var(--light);
+    font-size: 1.5rem;
+    margin: 1em;
 }
 
-main {
-    width: 100%;
-}
-
-section {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    background-color: #ffffff;
-    min-height: 100vh;
-    border: black solid 3px;
-    border-radius: 10px;
-    margin-bottom: 50vh;
-}
-
+/* Footer */
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
+    background-color: var(--light);
     min-height: 10vh;
     border: black solid 3px;
     border-radius: 10px;
     margin-bottom: 2vh;
 }
 
-footer h3 {
-    font-size: 300%;
-    font-weight: 900;
-}
-
-footer ul {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-}
-
+/* Footer Contact Buttons */
 footer ul li {
-    list-style: none;
-    padding: 1em;
+    position: relative;
     background-color: black;
     border-radius: 10px;
-    margin: 1em;
     font-weight: bold;
-    font-size: 1em;
-    position: relative;
+    padding: 0.5em;
+    margin: 0.5em;
 }
 
-footer ul li a {
-    text-decoration: none;
-    color: white;
-}
-
+/* Footer Contact Button animation */
 footer ul li:hover {
     transition: 0.5s;
     background-color: #AAA;
     color: black;
 }
 
+/* Footer Contact Button animation */
 footer ul li:not(:hover) {
     transition: 0.5s;
 }
@@ -121,126 +122,89 @@ footer ul li:not(:hover) {
 
 /* Class Selectors */
 
-.sectionContent {
+/* 
+creates a white card in which you put content and a title
+uses .cardTitle and .cardContent as children classes 
+part of paralax scrolling 
+*/
+.card {
+    min-height: 100vh;
+    border: black solid 3px;
+    border-radius: 10px;
+    margin-bottom: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light);
+}
+
+/* 
+child class to .card
+put card title in here
+*/
+.cardTitle {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    width: 33%;
+}
+
+/* 
+child class to .card
+put card content in here
+*/
+.cardContent {
     width: 67%;
-    margin: 12px;
-    padding: 12px;
+    margin: 1em;
+    padding: 1em;
     border-left: solid 3px black;
     font-size: large;
 }
 
-.sectionTitle {
-    width: 33%;
-    text-align: center;
-    margin: 12px;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.projectDiv {
+/* creates flex row container with centered elements */
+.flexRow {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }
 
-.projectDiv h4 {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 12px;
-    text-align: center;
-    width: 70%;
-}
-
-.projectDiv p {
-    font-size: 18px;
-    margin: 12px;
-    text-align: center;
-    width: 70%;
-}
-
-.projectDiv img {
-    object-fit: cover;
+/* creates flex column container with centered elements */
+.flexColumn {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Id Selectors */
 
-/* title takes up 50% of header and nav takes up 50% of header */
-#title {
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    font-size: 2rem;
-}
-
-#aboutMe .sectionContent {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-#aboutMe figure {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    margin: 0;
-}
-
-#aboutMe figure figcaption{
-    font-size: 18px;
-    text-align: center;
-    margin: auto;
-    font-weight: 600;
-}
-
+/* making aboutMe picture responsive and setting position to relative for use by gradient border */
 #aboutMe figure div {
-    width: 70%;
+    margin-bottom: 1em;
     position: relative;
     z-index: 1;
-    padding: 0;
-    margin-bottom: 1em;
 }
 
-#aboutMe figure img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-#aboutMe p {
-    margin-left: 12px;
-}
-
-
-#myWork .sectionContent {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-
-#myWork .sectionContent img {
-    display: block;
-    border-radius: 10px;
-    width: 100%;
-    height: auto;
-    margin: auto;
-}
-
-#myWork .sectionContent a {
+/* Sets myWork image width and setting position to relative for use by gradient border */
+#myWork .cardContent a {
     position: relative;
     z-index: 1;
     width: 50%;
 }
 
-#myWork .sectionContent #mainWorkImage {
+/* Sets the main image in the myWork section to be larger than the rest */
+#myWork .cardContent #mainWorkImage {
     position: relative;
     z-index: 1;
     width: 90%;
 }
 
+/* creates an animated gradient border around images */
 #aboutMe figure div::before,
-#myWork .sectionContent a::before {
+#myWork .cardContent a::before {
     content: "";
     position: absolute;
     top: -5px;
@@ -254,7 +218,8 @@ footer ul li:not(:hover) {
     border-radius: 10px;
 }
 
-#myWork .sectionContent a:hover::after {
+/* creates a semi transparant grey overlay over project images when the user hovers over them */
+#myWork .cardContent a:hover::after {
     content: "";
     position: absolute;
     bottom: 0px;
@@ -267,6 +232,7 @@ footer ul li:not(:hover) {
     border-radius: 10px;
 }
 
+/* creates a popup when user hover or selects the linkedin a */
 #linkedIn:focus::after,
 #linkedIn:hover::after {
     content: "LinkedIn Profile is coming soon!";
@@ -279,6 +245,7 @@ footer ul li:not(:hover) {
     height: 100%;
 }
 
+/* turns button transparaent so popup isnt blocked */
 #linkedIn:hover,
 #linkedIn:focus {
     background-color: transparent;
@@ -286,71 +253,48 @@ footer ul li:not(:hover) {
 
 /* media queries */
 
-@media screen and (max-width: 1400px) {
-    section {
-        flex-direction: column;
-    }
-
-    .sectionContent {
-        border-top: solid 3px black;
-        padding: 4%;
-        border-left: none;
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    figure {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    footer ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-}
-
-
+/* Tablet screen size */
 @media screen and (max-width: 768px) {
-    /* Make mobile friendly */
-    /* #aboutMe img {
-        width: auto;
-        height: 200px;
-    } */
 
     body {
         width: 95vw;
         margin: auto;
     }
 
-    footer ul {
+    .flexRow {
+        flex-direction: column;
+    }
+}
+
+/* phone screen size */
+@media screen and (max-width: 480px) {
+    .card {
         flex-flow: column wrap;
+    }
+
+    .cardContent {
+        border-left: none;
+        border-top: solid black 3px;
     }
 }
 
 /* Keyframes Animations */
 
+/* border gradient animation */
 @keyframes gradient {
     0% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
     100% {
-      background-position: 0% 50%;
+        background-position: 0% 50%;
     }
-  }
+}
 
-  @keyframes header {
+/* header animation */
+@keyframes header {
     0% {
         background-size: 100% 100%;
         background-position: center;
@@ -363,7 +307,7 @@ footer ul li:not(:hover) {
         background-size: 200% 200%;
         background-position: center;
     }
-  }
+}
 
 
 
