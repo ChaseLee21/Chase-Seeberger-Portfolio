@@ -12,7 +12,7 @@ No installation required
 ## Usage
 To view the project just use the link below to see the page on github pages!
 
-https://chaselee21.github.io/Portfolio/
+https://chaselee21.github.io/Chase-Seeberger-Portfolio/
 
 ## Contributing
 
