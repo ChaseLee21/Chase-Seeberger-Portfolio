@@ -2,14 +2,6 @@
 
 /* Element Selectors */
 
-/* commented out for parralex scrolling */
-/* body {
-    background-image: linear-gradient(-45deg, rgb(0, 0, 180), blue, rgb(67, 67, 216), rgb(94, 94, 174), rgb(67, 67, 216), blue, rgb(0, 0, 180));
-    background-size: 200% 200%;
-    animation: gradient 5s ease infinite;
-    padding: 24px;
-} */
-
 body {
     background-image: url("../images/beach-background-landscape.jpg");
     background-attachment: fixed;
@@ -42,20 +34,16 @@ header nav {
     margin-right: 3%;
 }
 
-footer ul,
 header nav ul {
     display: flex;
-    justify-content: end;
-
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
-footer ul li,
 header nav ul li {
-    
     list-style: none;
-    padding: 10px;
-    margin: 12px;
-    font-size: 24px;
+    padding: 1em;
+    font-size: 1.5em;
 }
 
 header nav ul li a {
@@ -90,6 +78,7 @@ footer {
     min-height: 10vh;
     border: black solid 3px;
     border-radius: 10px;
+    margin-bottom: 2vh;
 }
 
 footer h3 {
@@ -97,38 +86,36 @@ footer h3 {
     font-weight: 900;
 }
 
-footer ul li a {
-    font-weight: bold;
+footer ul {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
-    color: white;
-    background-color: rgb(0, 0, 0);
-    padding: 12px;
-    border-radius: 10px;
 }
 
-footer ul li a:hover {
+footer ul li {
+    list-style: none;
+    padding: 1em;
+    background-color: black;
+    border-radius: 10px;
+    margin: 1em;
+    font-weight: bold;
+    font-size: 1em;
+    position: relative;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer ul li:hover {
     transition: 0.5s;
     background-color: #AAA;
     color: black;
 }
 
-footer ul li a:not(:hover) {
+footer ul li:not(:hover) {
     transition: 0.5s;
-}
-
-footer ul {
-    position: relative;
-}
-
-#linkedIn:focus::after,
-#linkedIn:hover::after {
-    content: "LinkedIn Profile is coming soon!";
-    position: absolute;
-    top: -36px;
-    left: 100px;
-    border: solid 1px black;
-    padding: 1%;
 }
 
 
@@ -183,19 +170,41 @@ footer ul {
     text-align: center;
     color: white;
     font-weight: bold;
-    font-size: 28px;
-    margin-left: 3%;
+    font-size: 2rem;
 }
 
 #aboutMe .sectionContent {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
-#aboutMe img {
-    width: auto;
-    height: 400px;
+#aboutMe figure {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin: 0;
+}
+
+#aboutMe figure figcaption{
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
+    font-weight: 600;
+}
+
+#aboutMe figure div {
+    width: 70%;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+#aboutMe figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 #aboutMe p {
@@ -213,18 +222,24 @@ footer ul {
 #myWork .sectionContent img {
     display: block;
     border-radius: 10px;
+    width: 100%;
+    height: auto;
+    margin: auto;
 }
 
 #myWork .sectionContent a {
     position: relative;
-    width: auto;
-    height: auto;
-    margin: 2%;
-    overflow: visible;
-    border-radius: 10px;
     z-index: 1;
+    width: 50%;
 }
 
+#myWork .sectionContent #mainWorkImage {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+}
+
+#aboutMe figure div::before,
 #myWork .sectionContent a::before {
     content: "";
     position: absolute;
@@ -232,9 +247,9 @@ footer ul {
     right: -5px;
     bottom: -5px;
     left: -5px;
-    background-image: linear-gradient(45deg, blue, black, blue);
-    background-size: 125% 125%;
-    animation: gradient 5s ease infinite;
+    background-image: linear-gradient(-45deg, rgb(0, 0, 180), blue, rgb(67, 67, 216), rgb(94, 94, 174), rgb(67, 67, 216), blue, rgb(0, 0, 180), black);
+    background-size: 150% 150%;
+    animation: gradient 3s ease infinite;
     z-index: -1;
     border-radius: 10px;
 }
@@ -250,6 +265,23 @@ footer ul {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+}
+
+#linkedIn:focus::after,
+#linkedIn:hover::after {
+    content: "LinkedIn Profile is coming soon!";
+    position: absolute;
+    border: solid 1px black;
+    padding: 1em;
+    top: -1em;
+    left: -1em;
+    width: 100%;
+    height: 100%;
+}
+
+#linkedIn:hover,
+#linkedIn:focus {
+    background-color: transparent;
 }
 
 /* media queries */
@@ -283,24 +315,24 @@ footer ul {
         justify-content: center;
         align-items: center;
     }
-    
-    #linkedIn:focus::after,
-    #linkedIn:hover::after {
-    content: "LinkedIn Profile is coming soon!";
-    position: absolute;
-    top: 75px;
-    left: 50px;
-    background-color: black;
-    color: white;
-    padding: 1%;
+
 }
-}
+
 
 @media screen and (max-width: 768px) {
     /* Make mobile friendly */
-    #aboutMe img {
+    /* #aboutMe img {
         width: auto;
         height: 200px;
+    } */
+
+    body {
+        width: 95vw;
+        margin: auto;
+    }
+
+    footer ul {
+        flex-flow: column wrap;
     }
 }
 
